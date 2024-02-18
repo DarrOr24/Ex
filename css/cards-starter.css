@@ -187,10 +187,18 @@ h2::before{
 
 /* The card paragraph */
 
-/* TODO: The paragraph should be aligned to the right and top and should 
+/* DONE: The paragraph should be aligned to the right and top and should 
    only become visible when the card is hovered by sliding in 
    from the bottom and transitioning in opacity */
 
 .card p {
+    opacity: 0;
     grid-area: 3 / 1;
+    transition: var(--duration-short) ease-out;
+    margin-inline:var(--margin-inline); 
+}
+
+.card:hover p{
+    opacity: 1;
+    animation: slide 1s ease-in;
 }
