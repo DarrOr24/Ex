@@ -94,10 +94,34 @@ h1 {
     translate: 0px -20px;
 }
 
-/* TODO: Use a pseudo element to give the title a 5px wide line under it.
+/* DONE: Use a pseudo element to give the title a 5px wide line under it.
    The line should run the full width of the card with 32px margins on both sides
    This line should only become visible when the card is hovered,
    by sliding in from the bottom and transitioning in opacity */
+
+
+h2::before{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left:0;
+    right:0;
+    height: 5px;
+    background-color: white;
+    opacity:0;
+}
+
+.card:hover h2::before{
+    opacity: 1;
+    animation: slide 1s ease-in;
+}
+
+@keyframes slide {
+    0% {
+        translate:
+        0px 300px;
+    }
+}
 
 /* The toolbar */
 
