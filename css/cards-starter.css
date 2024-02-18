@@ -154,11 +154,36 @@ h2::before{
     width: calc(var(--image-width) - var(--margin-inline) * 2); /* ?? */
 }
 
-/* TODO: Add styling to the toolbar icons */
+/* DONE: Add styling to the toolbar icons */
 /* When they hovered, scale them up by 30% & give them a pink color */
 /* Add a different animation from animate.css to each one.
    The animations should be triggered 600ms after the hover state starts, 
    and run one cycle lasting 600ms */
+
+.toolbar i{
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.toolbar i:hover{
+    scale: 130%;
+    color: lightpink;
+    animation-duration: 600ms;
+    animation-delay: 600ms;
+}
+
+.fa-bookmark:hover{
+    animation: swing;
+}
+
+.fa-heart:hover{
+    animation: heartBeat;
+}
+
+.fa-arrow-up-from-bracket:hover{
+    animation: shakeX;
+}
+
 
 /* The card paragraph */
 
