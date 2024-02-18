@@ -63,7 +63,10 @@ h1 {
     transition: var(--duration-short) ease-out;
 }
 
-/* TODO: Make the image semi transparent when the card is hovered */
+/* DONE: Make the image semi transparent when the card is hovered */
+.card:hover img{
+    opacity: 0.5;
+}
 
 /* The card title */
 
@@ -87,6 +90,9 @@ h1 {
 }
 
 /* TODO: Make the title slide up 20px when the card is hovered. */
+.card:hover h2{
+    translate: 0px -20px;
+}
 
 /* TODO: Use a pseudo element to give the title a 5px wide line under it.
    The line should run the full width of the card with 32px margins on both sides
